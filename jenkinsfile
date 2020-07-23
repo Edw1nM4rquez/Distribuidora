@@ -9,7 +9,7 @@ node{
         }
 
         stage('Build'){
-            sh"npm run build:ssr"
+            sh"npm run ng build --prod"
         }
 
         stage ('Deploy'){
