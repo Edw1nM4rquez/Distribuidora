@@ -1,0 +1,21 @@
+<p>productolista works!</p>
+<table>
+    <thead>
+        <tr>
+            <th><h1>codigo</h1></th>
+            <th><h1>nombre</h1></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = 'let producto of productos'>
+            <td>{{producto.codigo}}</td>
+            <td>{{producto.imagen}}</td>
+           
+
+
+        </tr>
+    </tbody>
+
+</table>
+
+<a [routerLink]="['/Login/']">Seleccionar Carpeta</a>

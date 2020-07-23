@@ -1,0 +1,20 @@
+//This show as simple example of how to archive the build output artifacts.
+node{
+        stage('Checkout SCM'){
+            git branch: 'SP2', url:'git@github.com:dguzmanc4/DistribuidoraJSF.git'
+        }
+
+        stage('Install node modules'){
+            sh"npm install"
+        }
+
+        stage('Build'){
+            sh"npm run build:ssr"
+        }
+
+        stage ('Deploy'){
+            sh "pm2 restart all"
+        }
+
+
+}
